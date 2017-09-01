@@ -24,7 +24,9 @@ Installed plugins:
  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
 
+Language specific:
+ - [javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)
  - [swift.vim](https://github.com/keith/swift.vim)
-
  - [vim-go](https://github.com/fatih/vim-go)
  - [Dockerfile.vim](https://github.com/ekalinin/Dockerfile.vim)
+ - [sql-syntax](https://github.com/magicalbanana/vim-sql-syntax.git)
