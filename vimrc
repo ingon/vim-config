@@ -127,7 +127,7 @@ augroup mySyntastic
 	au!
 	au FileType tex let b:syntastic_mode = "passive"
 augroup END
-let g:syntactic_check_on_wq = 0
+let g:syntastic_check_on_wq = 0
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
