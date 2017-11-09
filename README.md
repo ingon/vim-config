@@ -20,9 +20,12 @@ Installed plugins:
  - [vim-misc](https://github.com/xolox/vim-misc)
  - [vim-easytags](https://github.com/xolox/vim-easytags)
  - [tagbar](https://github.com/majutsushi/tagbar)
+  - [ctags](https://ctags.sourceforge.com), also through homebrew
 
  - [vim-fugitive](https://github.com/tpope/vim-fugitive)
  - [vim-gitgutter](https://github.com/airblade/vim-gitgutter)
+
+ - [vim-commantary](https://github.com/tpope/vim-commentary)
 
 Language specific:
  - [javacomplete2](https://github.com/artur-shaik/vim-javacomplete2)

@@ -30,6 +30,8 @@ syntax on                              " enable syntax highlighting
 
 set mouse=a                            " enable mouse
 
+set clipboard=unnamed				   " system clipboard integration
+
 set backup		    " keep a backup file (restore to previous version)
 set undofile		" keep an undo file (undo changes after closing)
 set history=50		" keep 50 lines of command line history
@@ -46,6 +48,7 @@ hi clear SignColumn
 
 set tabstop=4
 set shiftwidth=4
+set expandtab
 
 set scrolloff=5
 
@@ -124,6 +127,7 @@ augroup mySyntastic
 	au!
 	au FileType tex let b:syntastic_mode = "passive"
 augroup END
+let g:syntactic_check_on_wq = 0
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
