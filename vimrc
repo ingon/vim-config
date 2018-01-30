@@ -77,6 +77,11 @@ nnoremap <C-l> <C-w>l
 " clear hilighting from search
 nmap <leader><space> :noh<cr>
 
+autocmd BufNewFile,BufRead *.ejs set filetype=html
+" override js specific settings
+autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 expandtab
+" override html specific settings
+autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 " override yaml specific settings
 autocmd FileType yml,yaml setlocal tabstop=2 shiftwidth=2 expandtab
 " docker compose settings
@@ -127,7 +132,7 @@ augroup mySyntastic
 	au!
 	au FileType tex let b:syntastic_mode = "passive"
 augroup END
-let g:syntastic_check_on_wq = 0
+let g:syntactic_check_on_wq = 0
 
 " ----- airblade/vim-gitgutter settings -----
 " In vim-airline, only display "hunks" if the diff is non-zero
