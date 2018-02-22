@@ -45,10 +45,15 @@ set directory=~/.vim/dotfiles/swp//
 hi clear SignColumn
 
 " ----- Custom modified by me -----
+set autoread                           " reload files changes outside
+set encoding=utf-8
+set fileencoding=utf-8
 
 set tabstop=4
 set shiftwidth=4
-set expandtab
+set expandtab       " use spaces instead of tabs
+set autoindent      " autoindent based on line above, works most of the time
+set smartindent     " smarter indent for C-like languages
 
 set scrolloff=5
 
@@ -76,6 +81,17 @@ nnoremap <C-l> <C-w>l
 
 " clear hilighting from search
 nmap <leader><space> :noh<cr>
+
+" map <leader>q and <leader>w to buffer prev/next buffer
+noremap <leader>q :bp<CR>
+noremap <leader>w :bn<CR>
+
+" save with ctrl+s
+nmap <c-s> :w<CR>
+imap <c-s> <Esc>:w<CR>a
+
+" select all mapping
+noremap <leader>a ggVG
 
 autocmd BufNewFile,BufRead *.ejs set filetype=html
 " override js specific settings

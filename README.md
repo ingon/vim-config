@@ -3,6 +3,7 @@ Inspiration:
  - [vim-as-ide](https://github.com/jez/vim-as-an-ide)
  - [dotfiles](https://github.com/jez/dotfiles/blob/master/vimrc)
  - [dotfile](https://github.com/bezi/dotfiles/tree/master/vim/config)
+ - [another-dotfile](https://gist.github.com/gosukiwi/080d1d3f87f861a15c44)
 
 Installed plugins:
 
