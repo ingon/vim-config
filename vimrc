@@ -93,6 +93,9 @@ imap <c-s> <Esc>:w<CR>a
 " select all mapping
 noremap <leader>a ggVG
 
+" paste
+xnoremap <leader>p "_dP
+
 autocmd BufNewFile,BufRead *.ejs set filetype=html
 " override js specific settings
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 expandtab
@@ -133,7 +136,7 @@ let g:airline#extensions#tabline#enabled = 1
 let g:airline_theme='molokai'
 
 " ----- ctrl.p -----
-let g:ctrlp_custom_ignore = '\v[\/]vendor$'
+let g:ctrlp_custom_ignore = '\v[\/](vendor|target|node_modules)$'
 
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
@@ -144,6 +147,9 @@ nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
 " ----- vim-syntastic/syntastic settings -----
 let g:syntastic_error_symbol = '✘'
 let g:syntastic_warning_symbol = "▲"
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
 augroup mySyntastic
 	au!
 	au FileType tex let b:syntastic_mode = "passive"
