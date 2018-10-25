@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+cp vimrc ~/.vimrc
+
 mkdir -p ~/.vim/dotfiles/undo ~/.vim/dotfiles/backup ~/.vim/dotfiles/swp
 
 mkdir -p ~/.vim/colors
@@ -32,5 +34,14 @@ git clone https://github.com/tpope/vim-fugitive.git ~/.vim/bundle/vim-fugitive
 git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutter
 
 git clone https://github.com/tpope/vim-commentary.git ~/.vim/bundle/vim-commentary
+
+read -p "Install vim-go? " -n 1 -r
+echo
+if [[ $REPLY =~ [Yy]$ ]]
+then
+    git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
+else
+    echo "  Skipping vim-go"
+fi
 
 echo "done"

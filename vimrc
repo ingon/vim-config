@@ -99,6 +99,7 @@ xnoremap <leader>p "_dP
 autocmd BufNewFile,BufRead *.ejs set filetype=html
 " override js specific settings
 autocmd FileType javascript setlocal tabstop=2 shiftwidth=2 expandtab
+autocmd FileType typescript setlocal tabstop=2 shiftwidth=2 expandtab
 " override html specific settings
 autocmd FileType html setlocal tabstop=2 shiftwidth=2 expandtab
 " override yaml specific settings
@@ -141,6 +142,7 @@ let g:ctrlp_custom_ignore = '\v[\/](vendor|target|node_modules)$'
 " ----- jistr/vim-nerdtree-tabs -----
 " Open/close NERDTree Tabs with \t
 nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nmap <silent> <leader>r :NERDTreeFind<CR>
 " To have NERDTree always open on startup
 " let g:nerdtree_tabs_open_on_console_startup = 1
 
@@ -220,4 +222,14 @@ imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
   " compatible).
 "  set langnoremap
 "endif
+
+"vimgo
+
+let g:go_fmt_command = "goimports"
+let g:go_highlight_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_extra_types = 1
 
