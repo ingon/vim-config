@@ -108,6 +108,8 @@ autocmd FileType yml,yaml setlocal tabstop=2 shiftwidth=2 expandtab
 autocmd FileType docker-compose setlocal tabstop=2 shiftwidth=2 expandtab
 " java settings
 autocmd FileType java setlocal omnifunc=javacomplete#Complete
+" grpc
+autocmd FileType proto setlocal tabstop=2 shiftwidth=2 expandtab
 
 " ----- Plugin specific settings -----
 
