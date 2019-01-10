@@ -4,12 +4,12 @@ cp vimrc ~/.vimrc
 
 mkdir -p ~/.vim/dotfiles/undo ~/.vim/dotfiles/backup ~/.vim/dotfiles/swp
 
-mkdir -p ~/.vim/colors
-git clone https://github.com/tomasr/molokai.git ~/.vim/colors/molokai
-cp ~/.vim/colors/molokai/colors/molokai.vim ~/.vim/colors/
+git clone https://github.com/tomasr/molokai.git molokai
+git clone https://github.com/abertsch/Menlo-for-Powerline.git menlo-for-powerline
+https://github.com/mbadolato/iTerm2-Color-Schemes.git iTerm2-color-schemes
 
-mkdir -p ~/.vim/fonts
-git clone https://github.com/abertsch/Menlo-for-Powerline.git ~/.vim/fonts/menlo-for-powerline
+mkdir -p ~/.vim/colors
+cp molokai/colors/molokai.vim ~/.vim/colors/
 
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
