@@ -8,6 +8,9 @@ mkdir -p ~/.vim/colors
 git clone https://github.com/tomasr/molokai.git ~/.vim/colors/molokai
 cp ~/.vim/colors/molokai/colors/molokai.vim ~/.vim/colors/
 
+mkdir -p ~/.vim/fonts
+git clone https://github.com/abertsch/Menlo-for-Powerline.git ~/.vim/fonts/menlo-powerline
+
 mkdir -p ~/.vim/autoload ~/.vim/bundle
 curl -LSso ~/.vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
 
