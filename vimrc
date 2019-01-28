@@ -117,6 +117,8 @@ autocmd FileType proto setlocal tabstop=2 shiftwidth=2 expandtab
 set background=dark
 
 colorscheme molokai
+" let g:molokai_original = 1
+let g:rehash256 = 1
 
 " ----- bling/vim-airline settings -----
 " Always show statusbar

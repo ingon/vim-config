@@ -5,7 +5,7 @@ cp vimrc ~/.vimrc
 mkdir -p ~/.vim/dotfiles/undo ~/.vim/dotfiles/backup ~/.vim/dotfiles/swp
 
 mkdir -p ~/.vim/colors
-git clone https://github.com/tomasr/molokai.git ~/.vim/colors/molokai
+git clone https://github.com/Ingon/molokai.git ~/.vim/colors/molokai
 cp ~/.vim/colors/molokai/colors/molokai.vim ~/.vim/colors/
 
 mkdir -p ~/.vim/fonts
