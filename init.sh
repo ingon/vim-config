@@ -8,6 +8,8 @@ mkdir -p ~/.vim/colors
 git clone https://github.com/Ingon/molokai.git ~/.vim/colors/molokai
 cp ~/.vim/colors/molokai/colors/molokai.vim ~/.vim/colors/
 
+git clone https://github.com/mbadolato/iTerm2-Color-Schemes.git ~/.vim/colors/terminal
+
 mkdir -p ~/.vim/fonts
 git clone https://github.com/abertsch/Menlo-for-Powerline.git ~/.vim/fonts/menlo-powerline
 
