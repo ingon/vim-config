@@ -229,6 +229,7 @@ imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
 "vimgo
 
+let g:go_def_mode = "godef"
 let g:go_fmt_command = "goimports"
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
