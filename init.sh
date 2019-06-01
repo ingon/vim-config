@@ -37,13 +37,22 @@ git clone git://github.com/airblade/vim-gitgutter.git ~/.vim/bundle/vim-gitgutte
 
 git clone https://github.com/tpope/vim-commentary.git ~/.vim/bundle/vim-commentary
 
-read -p "Install vim-go? " -n 1 -r
+read -p "Install go support? " -n 1 -r
 echo
 if [[ $REPLY =~ [Yy]$ ]]
 then
     git clone https://github.com/fatih/vim-go.git ~/.vim/bundle/vim-go
 else
-    echo "  Skipping vim-go"
+    echo "  Skipping go"
+fi
+
+read -p "Install typescript support? " -n 1 -r
+echo
+if [[ $REPLY =~ [Yy]$ ]]
+then
+    git clone https://github.com/leafgarland/typescript-vim.git ~/.vim/bundle/typescript-vim
+else
+    echo "  Skipping typescript"
 fi
 
 echo "done"
