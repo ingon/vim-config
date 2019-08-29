@@ -55,4 +55,13 @@ else
     echo "  Skipping typescript"
 fi
 
+read -p "Install nim support? " -n 1 -r
+echo
+if [[ $REPLY =~ [Yy]$ ]]
+then
+    git clone https://github.com/zah/nim.vim.git ~/.vim/bundle/nim.vim
+else
+    echo "  Skipping nim"
+fi
+
 echo "done"
