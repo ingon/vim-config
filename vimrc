@@ -55,7 +55,7 @@ set expandtab       " use spaces instead of tabs
 set autoindent      " autoindent based on line above, works most of the time
 set smartindent     " smarter indent for C-like languages
 
-set scrolloff=5
+set scrolloff=3
 
 " disable cursor keys in normal mode
 noremap <left> <nop>
