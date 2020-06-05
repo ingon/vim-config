@@ -57,17 +57,6 @@ set smartindent     " smarter indent for C-like languages
 
 set scrolloff=3
 
-" disable cursor keys in normal mode
-noremap <left> <nop>
-noremap <right> <nop>
-noremap <up> <nop>
-noremap <down> <nop>
-inoremap <up> <nop>
-inoremap <down> <nop>
-inoremap <left> <nop>
-inoremap <right> <nop>
-" inoremap <ESC> <nop>
-
 " make the j and k work better with wrapped text
 " if you hit j, it goes down a visual line, not a logical line
 noremap j gj
@@ -231,6 +220,7 @@ imap <F7> <Plug>(JavaComplete-Imports-RemoveUnused)
 
 let g:go_def_mode = "godef"
 let g:go_fmt_command = "goimports"
+let g:go_rename_command = "gopls"
 let g:go_highlight_types = 1
 let g:go_highlight_fields = 1
 let g:go_highlight_functions = 1
@@ -238,3 +228,4 @@ let g:go_highlight_function_calls = 1
 let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
 
+let g:deoplete#enable_at_startup = 1
