@@ -64,4 +64,13 @@ else
     echo "  Skipping nim"
 fi
 
+read -p "Install zig support? " -n 1 -r
+echo
+if [[ $REPLY =~ [Yy]$ ]]
+then
+    git clone https://github.com/ziglang/zig.vim ~/.vim/bundle/zig.vim
+else
+    echo "  Skipping zig"
+fi
+
 echo "done"

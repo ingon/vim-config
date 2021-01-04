@@ -1,0 +1,149 @@
+set nocompatible
+
+call plug#begin()
+
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+
+Plug 'ctrlpvim/ctrlp.vim'
+
+Plug 'scrooloose/nerdtree'
+Plug 'jistr/vim-nerdtree-tabs'
+
+" Plug 'vim-syntastic/syntastic'
+" Plug 'xolox/vim-misc.git'
+" Plug 'xolox/vim-easytags.git'
+" Plug 'majutsushi/tagbar.git'
+" ctags
+
+Plug 'tpope/vim-fugitive'
+Plug 'airblade/vim-gitgutter'
+Plug 'tpope/vim-commentary'
+Plug 'easymotion/vim-easymotion'
+
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
+
+call plug#end()
+"
+" Enable file type detection.
+filetype plugin indent on
+
+" ----- Add common settings -----
+
+set backspace=indent,eol,start         " allow backspacing over everything in insert mode
+set ruler		                       " show the cursor position all the time
+set number                             " prefix lines with a number
+set showcmd		                       " display incomplete commands
+
+set ignorecase                         " search ignoring case
+set smartcase                          " case insensitive search unless there's varied casing, then it's case sensitive
+set showmatch                          " ???
+set incsearch		                   " do incremental searching
+set hlsearch                           " highlight the search
+
+syntax on                              " enable syntax highlighting
+
+set mouse=a                            " enable mouse
+
+set clipboard=unnamed                  " system clipboard integration
+
+set backup                             " keep a backup file (restore to previous version)
+set undofile                           " keep an undo file (undo changes after closing)
+set history=50                         " keep 50 lines of command line history
+
+" Move help files aside
+set undodir=~/.vim/dotfiles/undo//
+set backupdir=~/.vim/dotfiles/backup//
+set directory=~/.vim/dotfiles/swp//
+
+" We need this for plugins like Syntastic and vim-gitgutter which put symbols in the sign column.
+hi clear SignColumn
+
+" ----- Custom modified by me -----
+set autoread                           " reload files changes outside
+set encoding=utf-8
+set fileencoding=utf-8
+
+set tabstop=4
+set shiftwidth=4
+set expandtab                          " use spaces instead of tabs
+set autoindent                         " autoindent based on line above, works most of the time
+set smartindent                        " smarter indent for C-like languages
+
+set scrolloff=3
+
+" ----- Special key mappings -----
+
+" make the j and k work better with wrapped text
+" if you hit j, it goes down a visual line, not a logical line
+noremap j gj
+noremap k gk
+
+" navigate splits by adding the Ctrl-modifier to the analogous vim motion
+nnoremap <C-h> <C-w>h
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-l> <C-w>l
+
+" clear hilighting from search
+nmap <leader><space> :noh<cr>
+
+" map <leader>q and <leader>w to buffer prev/next buffer
+noremap <leader>q :bp<CR>
+noremap <leader>w :bn<CR>
+
+" select all mapping
+noremap <leader>a ggVG
+
+" paste
+xnoremap <leader>p "_dP
+
+" ----- Plugin specific settings -----
+
+" ----- Color settings -----
+set background=dark
+
+colorscheme molokai
+" let g:molokai_original = 1
+let g:rehash256 = 1
+
+" ----- bling/vim-airline settings -----
+" Always show statusbar
+set laststatus=2
+
+" Fancy arrow symbols, requires a patched font
+" To install a patched font, run over to
+"     https://github.com/abertsch/Menlo-for-Powerline
+" download all the .ttf files, double-click on them and click "Install"
+" Finally, uncomment the next line
+let g:airline_powerline_fonts = 1
+
+" Show PASTE if in paste mode
+let g:airline_detect_paste=1
+
+" Show airline for tabs too
+let g:airline#extensions#tabline#enabled = 1
+
+" Use the solarized theme for the Airline status bar
+let g:airline_theme='molokai'
+
+" ----- ctrl.p -----
+let g:ctrlp_custom_ignore = '\v[\/](vendor|target|node_modules)$'
+
+" ----- jistr/vim-nerdtree-tabs -----
+" Open/close NERDTree Tabs with \t
+nmap <silent> <leader>t :NERDTreeTabsToggle<CR>
+nmap <silent> <leader>r :NERDTreeFind<CR>
+" To have NERDTree always open on startup
+" let g:nerdtree_tabs_open_on_console_startup = 1
+"
+" ----- airblade/vim-gitgutter settings -----
+" In vim-airline, only display "hunks" if the diff is non-zero
+let g:airline#extensions#hunks#non_zero_only = 1
+
+" ----- coc.vim ------
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)

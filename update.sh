@@ -31,5 +31,6 @@ pushd ~/.vim/bundle/vim-commentary/ && git pull && popd
 pushd ~/.vim/bundle/vim-go/ && git pull && popd
 pushd ~/.vim/bundle/typescript-vim/ && git pull && popd
 pushd ~/.vim/bundle/nim.vim/ && git pull && popd
+pushd ~/.vim/bundle/zig.vim/ && git pull && popd
 
 echo "done"
