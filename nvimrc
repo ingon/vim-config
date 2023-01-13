@@ -111,13 +111,13 @@ nmap <silent> <leader>r :NERDTreeFind<CR>
 let g:airline#extensions#hunks#non_zero_only = 1
 
 " ----- vim-go ----
-let g:go_def_mode='gopls'
-let g:go_info_mode='gopls'
-let g:go_fmt_command = 'goimports'
-let g:go_rename_command = 'gopls'
-let g:go_highlight_types = 1
-let g:go_highlight_fields = 1
-let g:go_highlight_functions = 1
-let g:go_highlight_function_calls = 1
-let g:go_highlight_operators = 1
 let g:go_highlight_extra_types = 1
+let g:go_highlight_fields = 1
+let g:go_highlight_function_calls = 1
+let g:go_highlight_functions = 1
+let g:go_highlight_operators = 1
+let g:go_highlight_types = 1
+let g:go_highlight_variable_assignments = 0
+let g:go_highlight_variable_declarations = 0
+
+nmap <silent> <leader>x :GoBuildTags ''<CR>
