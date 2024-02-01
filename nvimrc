@@ -121,3 +121,7 @@ let g:go_highlight_variable_assignments = 0
 let g:go_highlight_variable_declarations = 0
 
 nmap <silent> <leader>x :GoBuildTags ''<CR>
+nmap <silent> <leader>b :GoBuild<CR>
+nmap <silent> <leader>n :cnext<CR>
+nmap <silent> <leader>m :cprevious<CR>
+nmap <silent> <leader>c :cclose<CR>
